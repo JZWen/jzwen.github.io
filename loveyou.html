@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>随机情话</title>
+  </head>
+  <body>
+    <h1>随机情话</h1>
+    <p id="content"></p>
+    <button onclick="showLove()">再来一句</button>
+    
+    <script>
+      // 十条情话
+      var loveWords = [
+        "我喜欢你胖胖的，因为这样才有更多的地方可以爱你！",
+        "你是我的阳光，让我每天都发光发亮！",
+        "你的眼神就像一颗闪亮的钻石，让我无法移开目光！",
+        "跟你在一起的时候，时间就停止了，只剩下我们的感觉！",
+        "你是我的滋味，让我每天都有好心情！",
+        "你就像一只小猫，让我想一直摸摸你！",
+        "爱情就像肯德基，够味就好！",
+        "和你在一起的日子就像一场甜蜜的梦，美丽却真实！",
+        "你就像可乐，甜甜的同时还有一丝丝的冰凉！",
+        "你的笑容是我一天中最美好的事情！"
+      ];
+      
+      function showLove() {
+        // 随机选择一条情话
+        var index = Math.floor(Math.random() * loveWords.length);
+        var love = loveWords[index];
+        
+        // 将情话显示到页面上
+        var content = document.getElementById("content");
+        content.innerHTML = love;
+      }
+    </script>
+  </body>
+</html>
